@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <limits.h>
 
 /* int factorielle_iterative(int n)
  * calcule la factorielle de n
@@ -9,8 +10,14 @@
  */
 int factorielle_iterative(int n) {
     int i, p = 1;
-    for (i = 1; i <= n; ++i)
-        p *= i;
+    for (i = 1; i <= n; ++i){
+        long tmp = p;
+        tmp *= i;
+        if (tmp > INT_MAX){
+            return -1;
+        }
+        p = tmp;
+    }
     return p;
 }
 
@@ -24,8 +31,13 @@ int factorielle_iterative(int n) {
 int factorielle_recursive(int n) {
     if (n <= 0)
         return 1;
+    else if (factorielle_recursive(n - 1) > INT_MAX / n)
+            return -1;
+    else if (factorielle_recursive(n - 1) < 0)
+            return -1;
     else
         return n * factorielle_recursive(n - 1);
+    
 }
 
 void afficher_table_factorielles(void) {

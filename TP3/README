@@ -1,0 +1,84 @@
+# TP3 — Évaluation des performances du vecteur
+
+## Auteur(s)
+Nom Prénom
+
+---
+
+## 📁 Organisation du projet
+
+- `./src`
+  - `vector.c` : implémentation du tableau dynamique
+  - `random.c` : génération de données aléatoires
+  - `bench_vector.c` : programme de benchmark
+  - `test_unit.c` : tests unitaires
+
+- `./headers`
+  - `vector.h`
+  - `random.h`
+
+- `./objs` : fichiers objets générés
+
+- `./bin` : exécutables générés
+
+- `./coverage` : rapports de couverture de code
+
+---
+
+## ⚙️ Choix d’implémentation
+
+Décrire ici :
+- les hypothèses sur la structure `vector`
+- les choix faits pour la gestion mémoire
+- les simplifications éventuelles (implémentation naïve, absence de capacité, etc.)
+- les conventions utilisées (indices, gestion des erreurs, etc.)
+
+---
+
+## ⚠️ Gestion des erreurs
+
+Expliquer :
+- les vérifications réalisées (pointeurs NULL, indices hors bornes…)
+- les codes d’erreur utilisés (`VectorStatus`)
+- les cas limites traités :
+  - vecteur vide
+  - insertion hors limites
+  - taille nulle
+  - bornes inversées dans random
+
+---
+
+## 🎲 Générateur aléatoire
+
+Décrire :
+- comment les fonctions `random_*` ont été implémentées
+- la gestion des intervalles :
+  - `[a, b[` vs `[a, b]`
+- la gestion des cas particuliers :
+  - `a > b`
+  - `a == b`
+- l’initialisation avec `random_init`
+
+---
+
+## 🧪 Tests unitaires
+
+Lister les tests ajoutés :
+- tests sur `vector`
+- tests sur `random`
+- vérification des intervalles
+- tests des cas limites
+
+Exemple :
+- test_random_int
+- test_random_double
+- test_vector_insert
+- test_vector_erase
+
+---
+
+## 🚀 Utilisation des benchmarks
+
+### Compilation
+```bash
+make

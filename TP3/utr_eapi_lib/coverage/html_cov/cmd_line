@@ -1,1 +1,0 @@
-genhtml ./coverage/index_cov.info -o ./coverage/html_cov --ignore-errors source

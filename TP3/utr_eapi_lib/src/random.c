@@ -41,10 +41,17 @@ void random_init(uint32_t seed) {
 /* Génération de nombres aléatoires                                           */
 /* ========================================================================== */
 
+static double random_unit(void) {
+    return rand() / (RAND_MAX + 1.0);
+}
+
 double random_double(double a, double b) {
-    double result = rand() / (RAND_MAX + 1.0);
-    result = a + result * (b - a);
-    return result;
+    if (a > b) {
+        double tmp = a;
+        a = b;
+        b = tmp;
+    }
+    return a + random_unit() * (b - a);
 }
 
 float random_float(float a, float b) {
@@ -54,9 +61,21 @@ float random_float(float a, float b) {
 }
 
 size_t random_size_t(size_t a, size_t b) {
+<<<<<<< Updated upstream
     double tmp = random_double((double) a, (double) b);
     size_t result = (size_t) tmp;
     return result;
+=======
+    if (a > b) {
+        size_t tmp = a;
+        a = b;
+        b = tmp;
+    }
+    if (a == b) {
+        return a;
+    }
+    return a + (size_t)(random_unit() * (double)(b - a + 1));
+>>>>>>> Stashed changes
 }
 
 int random_int(int a, int b) {

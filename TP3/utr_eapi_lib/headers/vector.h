@@ -28,6 +28,9 @@
  struct struct_vector{
      size_t size;
      double* data;
+#if defined(VERSION) && VERSION >= 2
+     size_t capacity;
+#endif
  };
 
  

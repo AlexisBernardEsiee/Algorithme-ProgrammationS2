@@ -108,7 +108,7 @@ void bubble_sort(size_t init_size, size_t n) {
     printf("Test: bubble_sort (repeated %zu times), size=%zu\n", n, init_size);
     p_s_vector vec = vector_alloc(init_size);
     for(size_t i = 0; i < n; i++) {
-        double value = random_double(0, 9999);
+        double value = random_double_official(0, 9999);
         vector_push_back(vec, value);
     }
     for(size_t i = 0; i < n; i++) {

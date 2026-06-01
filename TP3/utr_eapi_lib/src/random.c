@@ -48,13 +48,15 @@ double random_double(double a, double b) {
 }
 
 float random_float(float a, float b) {
-    // À implémenter
-    return 0.0f;
+    float result = rand() / (RAND_MAX + 1.0f);
+    result = a + result * (b - a);
+    return result;
 }
 
 size_t random_size_t(size_t a, size_t b) {
-    // À implémenter
-    return 0;
+    double tmp = random_double((double) a, (double) b);
+    size_t result = (size_t) tmp;
+    return result;
 }
 
 int random_int(int a, int b) {

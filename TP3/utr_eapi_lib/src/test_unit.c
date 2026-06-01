@@ -106,6 +106,51 @@ int test_random_double() {
     ASSERT(result != result2);
     ASSERT(a <= result2);
     ASSERT(b >= result2);
+
+    double result3 = random_double(b, a);
+    ASSERT(result != result3);
+    ASSERT(a <= result3);
+    ASSERT(b >= result3);
+    return 0;
+}
+
+int test_random_float() {
+    random_init(time(NULL));
+    float a = 1.5;
+    float b = 2.3;
+    float result = random_float(a, b);
+
+    ASSERT(a <= result);
+    ASSERT(b >= result);
+    float result2 = random_float(a, b);
+    ASSERT(result != result2);
+    ASSERT(a <= result2);
+    ASSERT(b >= result2);
+
+    float result3 = random_float(b, a);
+    ASSERT(result != result3);
+    ASSERT(a <= result3);
+    ASSERT(b >= result3);
+    return 0;
+}
+
+int test_random_size_t() {
+    random_init(time(NULL));
+    size_t a = 0;
+    size_t b = 100;
+    size_t result = random_size_t(a, b);
+
+    ASSERT(a <= result);
+    ASSERT(b >= result);
+    size_t result2 = random_size_t(a, b);
+    ASSERT(result != result2);
+    ASSERT(a <= result2);
+    ASSERT(b >= result2);
+
+    size_t result3 = random_size_t(b, a);
+    ASSERT(result != result3);
+    ASSERT(a <= result3);
+    ASSERT(b >= result3);
     return 0;
 }
 
@@ -120,6 +165,8 @@ int main() {
     failed += test_vector_insert_erase();
     failed += test_vector_empty();
     failed += test_random_double();
+    failed += test_random_float();
+    failed += test_random_size_t();
 
     if (failed == 0) {
         printf("[OK] Tous les tests sont validés.\n");

@@ -154,6 +154,26 @@ int test_random_size_t() {
     return 0;
 }
 
+int test_random_int() {
+    random_init(time(NULL));
+    int a = 0;
+    int b = 100;
+    int result = random_int(a, b);
+
+    ASSERT(a <= result);
+    ASSERT(b >= result);
+    int result2 = random_int(a, b);
+    ASSERT(result != result2);
+    ASSERT(a <= result2);
+    ASSERT(b >= result2);
+
+    int result3 = random_int(b, a);
+    ASSERT(result != result3);
+    ASSERT(a <= result3);
+    ASSERT(b >= result3);
+    return 0;
+}
+
 // Fonction principale exécutant les tests
 int main() {
     int failed = 0;
@@ -167,6 +187,7 @@ int main() {
     failed += test_random_double();
     failed += test_random_float();
     failed += test_random_size_t();
+    failed += test_random_int();
 
     if (failed == 0) {
         printf("[OK] Tous les tests sont validés.\n");

@@ -60,8 +60,9 @@ size_t random_size_t(size_t a, size_t b) {
 }
 
 int random_int(int a, int b) {
-    // À implémenter
-    return 0;
+    const double tmp = random_double(a, b);
+    const int result = (int) tmp;
+    return result;
 }
 
 char random_char(char a, char b) {

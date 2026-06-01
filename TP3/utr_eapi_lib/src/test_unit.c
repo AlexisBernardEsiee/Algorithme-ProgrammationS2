@@ -13,6 +13,7 @@
  ******************************************************************************/
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 
 #include "../headers/vector.h"
@@ -111,6 +112,9 @@ int test_random_double() {
     ASSERT(result != result3);
     ASSERT(a <= result3);
     ASSERT(b >= result3);
+
+    double result4 = random_double(a, a);
+    ASSERT(a == result4);
     return 0;
 }
 
@@ -131,6 +135,9 @@ int test_random_float() {
     ASSERT(result != result3);
     ASSERT(a <= result3);
     ASSERT(b >= result3);
+
+    float result4 = random_float(a, a);
+    ASSERT(a == result4);
     return 0;
 }
 
@@ -151,6 +158,9 @@ int test_random_size_t() {
     ASSERT(result != result3);
     ASSERT(a <= result3);
     ASSERT(b >= result3);
+
+    size_t result4 = random_size_t(a, a);
+    ASSERT(a == result4);
     return 0;
 }
 
@@ -171,6 +181,9 @@ int test_random_int() {
     ASSERT(result != result3);
     ASSERT(a <= result3);
     ASSERT(b >= result3);
+
+    int result4 = random_int(a, a);
+    ASSERT(a == result4);
     return 0;
 }
 
@@ -191,6 +204,20 @@ int test_random_char() {
     ASSERT(result != result3);
     ASSERT(a <= result3);
     ASSERT(b >= result3);
+
+    char result4 = random_char(a, a);
+    ASSERT(a == result4);
+    return 0;
+}
+
+int test_random_init_string() {
+    size_t n = 30;
+    random_init(time(NULL));
+    char c[n];
+    random_init_string(c, n);
+    for (size_t i = 0; i < n; i++) {
+        ASSERT(c[i] >= 'A' && c[i] <= 'Z');
+    }
     return 0;
 }
 
@@ -209,6 +236,7 @@ int main() {
     failed += test_random_size_t();
     failed += test_random_int();
     failed += test_random_char();
+    failed += test_random_init_string();
 
     if (failed == 0) {
         printf("[OK] Tous les tests sont validés.\n");

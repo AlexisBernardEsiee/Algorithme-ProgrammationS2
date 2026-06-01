@@ -76,7 +76,12 @@ char random_char(char a, char b) {
 /* ========================================================================== */
 
 void random_init_string(char *c, size_t n) {
-    // À implémenter
+    for (size_t i = 0; i < n; i++) {
+        char current = random_char('A', 'Z');
+        c[i] = current;
+    }
+    c[n] = '\0';
+
 }
 
 /******************************************************************************

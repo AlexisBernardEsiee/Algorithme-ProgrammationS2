@@ -66,8 +66,9 @@ int random_int(int a, int b) {
 }
 
 char random_char(char a, char b) {
-    // À implémenter
-    return 'A';
+    const double tmp = random_double(a, b);
+    const char result = (char) tmp;
+    return result;
 }
 
 /* ========================================================================== */

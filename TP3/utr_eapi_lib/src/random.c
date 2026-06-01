@@ -34,7 +34,7 @@
 /* ========================================================================== */
 
 void random_init(uint32_t seed) {
-    // À implémenter
+    srand(seed);
 }
 
 /* ========================================================================== */
@@ -42,8 +42,9 @@ void random_init(uint32_t seed) {
 /* ========================================================================== */
 
 double random_double(double a, double b) {
-    // À implémenter
-    return 0.0;
+    double result = rand() / (RAND_MAX + 1.0);
+    result = a + result * (b - a);
+    return result;
 }
 
 float random_float(float a, float b) {

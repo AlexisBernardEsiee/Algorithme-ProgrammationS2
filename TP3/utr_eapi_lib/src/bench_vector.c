@@ -27,17 +27,43 @@
 
 void insert_erase_random(size_t init_size, size_t n) {
     printf("Test: insert_erase_random, init_size=%zu, ops=%zu\n", init_size, n);
-    // À implémenter
+    p_s_vector vec = vector_alloc(init_size);
+    for(size_t i = 0; i < n; i++) {
+        size_t index = random_size_t(0, init_size);
+        double value = random_double(0, 9999);
+        vector_insert(vec, index, value);
+    }
+    for(size_t i = 0; i < n; i++) {
+        size_t index = random_size_t(0, init_size);
+        vector_erase(vec, index);
+    }
+    vector_free(&vec);
 }
 
 void insert_erase_head(size_t init_size, size_t n) {
     printf("Test: insert_erase_head, init_size=%zu, ops=%zu\n", init_size, n);
-    // À implémenter
+    p_s_vector vec = vector_alloc(init_size);
+    for(size_t i = 0; i < n; i++) {
+        double value = random_double(0, 9999);
+        vector_insert(vec, 0, value);
+    }
+    for(size_t i = 0; i < n; i++) {
+        vector_erase(vec, 0);
+    }
+    vector_free(&vec);
 }
 
 void insert_erase_tail(size_t init_size, size_t n) {
     printf("Test: insert_erase_tail, init_size=%zu, ops=%zu\n", init_size, n);
-    // À implémenter
+    p_s_vector vec = vector_alloc(init_size);
+    for(size_t i = 0; i < n; i++) {
+        double value = random_double(0, 9999);
+        vector_insert(vec, init_size, value);
+    }
+    for(size_t i = 0; i < n; i++) {
+        vector_erase(vec, init_size);
+    }
+    vector_free(&vec);
 }
 
 /* ========================================================================== */
@@ -46,12 +72,32 @@ void insert_erase_tail(size_t init_size, size_t n) {
 
 void read_write_random(size_t init_size, size_t n) {
     printf("Test: read_write_random, init_size=%zu, ops=%zu\n", init_size, n);
-    // À implémenter
+    p_s_vector vec = vector_alloc(init_size);
+    for(size_t i = 0; i < n; i++) {
+        size_t index = random_size_t(0, init_size);
+        double value = random_double(0, 9999);
+        vector_set(vec, index, value);
+    }
+    for(size_t i = 0; i < n; i++) {
+        size_t index = random_size_t(0, init_size);
+        double value;
+        vector_get(vec, index, &value);
+    }
+    vector_free(&vec);
 }
 
 void read_write_sequential(size_t init_size, size_t n) {
     printf("Test: read_write_sequential, init_size=%zu, ops=%zu\n", init_size, n);
-    // À implémenter
+    p_s_vector vec = vector_alloc(init_size);
+    for(size_t i = 0; i < n; i++) {
+        double value = random_double(0, 9999);
+        vector_set(vec, i, value);
+    }
+    for(size_t i = 0; i < n; i++) {
+        double value;
+        vector_get(vec, i, &value);
+    }
+    vector_free(&vec);
 }
 
 /* ========================================================================== */
@@ -60,7 +106,15 @@ void read_write_sequential(size_t init_size, size_t n) {
 
 void bubble_sort(size_t init_size, size_t n) {
     printf("Test: bubble_sort (repeated %zu times), size=%zu\n", n, init_size);
-    // À implémenter
+    p_s_vector vec = vector_alloc(init_size);
+    for(size_t i = 0; i < n; i++) {
+        double value = random_double(0, 9999);
+        vector_push_back(vec, value);
+    }
+    for(size_t i = 0; i < n; i++) {
+        vector_pop_back(vec);
+    }
+    vector_free(&vec);
 }
 
 /* ========================================================================== */

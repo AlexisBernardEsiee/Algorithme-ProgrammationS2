@@ -82,7 +82,7 @@ valgrind: ./bin/test_unit$(SUFFIX)
 	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./bin/test_unit$(SUFFIX)
 
 # Génération de la couverture de code
-coverage:
+coverageee:
 	$(MAKE) clean
 	$(MAKE) COVERAGE=1
 	./bin/test_unit_cov

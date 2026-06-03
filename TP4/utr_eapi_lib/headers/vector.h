@@ -27,7 +27,12 @@
  // Structure du tableau dynamique
  struct struct_vector{
      size_t size;
+#if defined(VERSION) && VERSION >= 3
+     void* data;
+     size_t element_size;
+#else
      double* data;
+#endif
 #if defined(VERSION) && VERSION >= 2
      size_t capacity;
 #endif
@@ -38,16 +43,31 @@
  typedef s_vector* p_s_vector;
  
  // Fonctions de manipulation du vecteur
- p_s_vector vector_alloc(size_t n);
+#if defined(VERSION) && VERSION >= 3
+p_s_vector vector_alloc(size_t n, void *data);
+#else
+p_s_vector vector_alloc(size_t n);
+#endif
  VectorStatus vector_free(p_s_vector *p_vector);
+
+#if defined(VERSION) && VERSION >= 3
+ VectorStatus vector_set(p_s_vector p_vector, ssize_t i, void *v);
+ VectorStatus vector_get(p_s_vector p_vector, ssize_t i, void **pv);
  
- VectorStatus vector_set(p_s_vector p_vector, ssize_t i, double v);
- VectorStatus vector_get(p_s_vector p_vector, ssize_t i, double *pv);
- 
- VectorStatus vector_insert(p_s_vector p_vector, ssize_t i, double v);
- VectorStatus vector_erase(p_s_vector p_vector, ssize_t i);
- 
+ VectorStatus vector_insert(p_s_vector p_vector, ssize_t i, void *v);
+#else
+VectorStatus vector_set(p_s_vector p_vector, ssize_t i, double v);
+VectorStatus vector_get(p_s_vector p_vector, ssize_t i, double *pv);
+
+VectorStatus vector_insert(p_s_vector p_vector, ssize_t i, double v);
+#endif
+VectorStatus vector_erase(p_s_vector p_vector, ssize_t i);
+
+#if defined(VERSION) && VERSION >= 3
+ VectorStatus vector_push_back(p_s_vector p_vector, void *v);
+#else
  VectorStatus vector_push_back(p_s_vector p_vector, double v);
+#endif
  VectorStatus vector_pop_back(p_s_vector p_vector);
  VectorStatus vector_clear(p_s_vector p_vector);
  

@@ -1,0 +1,691 @@
+desc: (none)
+cmd: ./bin/bench_vector insert_erase_random 1000 10000
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1037097
+mem_heap_B=14928
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=1896526
+mem_heap_B=19160
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=2769089
+mem_heap_B=22672
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=3223769
+mem_heap_B=24304
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=3938965
+mem_heap_B=26672
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=4486219
+mem_heap_B=28352
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=5129291
+mem_heap_B=30208
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=5824843
+mem_heap_B=32096
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=detailed
+n3: 32096 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 31056 0x109B69: vector_insert (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+  n1: 31056 0x109548: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+   n0: 31056 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n1: 1024 0x48F11B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4901523: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x48FEF8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x48FFAAE: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x48FFAAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x48CCCC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 1024 0x48CCCC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 1024 0x48D7742: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 1024 0x49A3A3C: __printf_chk (printf_chk.c:33)
+          n1: 1024 0x1094FC: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+           n0: 1024 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n0: 16 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=6740002
+mem_heap_B=34424
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=detailed
+n3: 34424 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 33384 0x109B69: vector_insert (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+  n1: 33384 0x109548: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+   n0: 33384 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n1: 1024 0x48F11B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4901523: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x48FEF8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x48FFAAE: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x48FFAAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x48CCCC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 1024 0x48CCCC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 1024 0x48D7742: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 1024 0x49A3A3C: __printf_chk (printf_chk.c:33)
+          n1: 1024 0x1094FC: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+           n0: 1024 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n0: 16 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=10
+#-----------
+time=7474022
+mem_heap_B=36184
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=8023588
+mem_heap_B=37448
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=8849632
+mem_heap_B=39272
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=9769050
+mem_heap_B=41208
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=10537820
+mem_heap_B=42760
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=11301398
+mem_heap_B=44248
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=11807798
+mem_heap_B=45208
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=12570046
+mem_heap_B=46616
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=13715677
+mem_heap_B=48656
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=14478213
+mem_heap_B=49968
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=14991417
+mem_heap_B=50832
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=15880956
+mem_heap_B=52296
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=16397684
+mem_heap_B=53128
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=17152117
+mem_heap_B=54320
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=17714582
+mem_heap_B=55192
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=18471302
+mem_heap_B=56344
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=19221922
+mem_heap_B=57464
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=20353104
+mem_heap_B=59112
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=21481784
+mem_heap_B=60712
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=22423887
+mem_heap_B=62016
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=detailed
+n3: 62016 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 60976 0x109B69: vector_insert (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+  n1: 60976 0x109548: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+   n0: 60976 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n1: 1024 0x48F11B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4901523: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x48FEF8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x48FFAAE: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x48FFAAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x48CCCC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 1024 0x48CCCC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 1024 0x48D7742: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 1024 0x49A3A3C: __printf_chk (printf_chk.c:33)
+          n1: 1024 0x1094FC: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+           n0: 1024 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n0: 16 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=30
+#-----------
+time=23177639
+mem_heap_B=63040
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=24306991
+mem_heap_B=64544
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=detailed
+n3: 64544 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 63504 0x109B69: vector_insert (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+  n1: 63504 0x109548: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+   n0: 63504 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n1: 1024 0x48F11B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4901523: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x48FEF8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x48FFAAE: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x48FFAAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x48CCCC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 1024 0x48CCCC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 1024 0x48D7742: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 1024 0x49A3A3C: __printf_chk (printf_chk.c:33)
+          n1: 1024 0x1094FC: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+           n0: 1024 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n0: 16 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=32
+#-----------
+time=25066427
+mem_heap_B=65536
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=26195592
+mem_heap_B=66984
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=detailed
+n3: 66984 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 65944 0x109B69: vector_insert (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+  n1: 65944 0x109548: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+   n0: 65944 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n1: 1024 0x48F11B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4901523: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x48FEF8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x48FFAAE: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x48FFAAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x48CCCC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 1024 0x48CCCC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 1024 0x48D7742: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 1024 0x49A3A3C: __printf_chk (printf_chk.c:33)
+          n1: 1024 0x1094FC: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+           n0: 1024 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n0: 16 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=27239948
+mem_heap_B=68296
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=28278276
+mem_heap_B=69576
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=28804628
+mem_heap_B=70216
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=detailed
+n3: 70216 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 69176 0x109B69: vector_insert (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+  n1: 69176 0x109548: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+   n0: 69176 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n1: 1024 0x48F11B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4901523: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x48FEF8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x48FFAAE: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x48FFAAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x48CCCC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 1024 0x48CCCC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 1024 0x48D7742: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 1024 0x49A3A3C: __printf_chk (printf_chk.c:33)
+          n1: 1024 0x1094FC: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+           n0: 1024 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n0: 16 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=37
+#-----------
+time=29844824
+mem_heap_B=71464
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=30371798
+mem_heap_B=72088
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=31411774
+mem_heap_B=73304
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=detailed
+n3: 73304 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72264 0x109B69: vector_insert (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+  n1: 72264 0x109548: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+   n0: 72264 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n1: 1024 0x48F11B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4901523: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x48FEF8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x48FFAAE: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x48FFAAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x48CCCC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 1024 0x48CCCC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 1024 0x48D7742: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 1024 0x49A3A3C: __printf_chk (printf_chk.c:33)
+          n1: 1024 0x1094FC: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+           n0: 1024 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n0: 16 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=40
+#-----------
+time=31938266
+mem_heap_B=73912
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=32975982
+mem_heap_B=75096
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=33500960
+mem_heap_B=75688
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=34281789
+mem_heap_B=76560
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=35326977
+mem_heap_B=77712
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=35855397
+mem_heap_B=78288
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=36894017
+mem_heap_B=79408
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=37418859
+mem_heap_B=79968
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=38464149
+mem_heap_B=81072
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=39245943
+mem_heap_B=81888
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=detailed
+n3: 81888 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 80848 0x109B69: vector_insert (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+  n1: 80848 0x109548: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+   n0: 80848 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n1: 1024 0x48F11B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4901523: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x48FEF8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x48FFAAE: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x48FFAAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x48CCCC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 1024 0x48CCCC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 1024 0x48D7742: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 1024 0x49A3A3C: __printf_chk (printf_chk.c:33)
+          n1: 1024 0x1094FC: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+           n0: 1024 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n0: 16 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=50
+#-----------
+time=39701690
+mem_heap_B=82360
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=40160113
+mem_heap_B=82832
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=40621200
+mem_heap_B=83304
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=41076994
+mem_heap_B=83768
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=41535332
+mem_heap_B=84232
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=41996094
+mem_heap_B=84696
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=42451371
+mem_heap_B=85152
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=42909192
+mem_heap_B=85608
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=43369413
+mem_heap_B=86064
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=43832106
+mem_heap_B=86520
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=detailed
+n3: 86520 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 85480 0x109B69: vector_insert (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+  n1: 85480 0x109548: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+   n0: 85480 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n1: 1024 0x48F11B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4901523: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x48FEF8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x48FFAAE: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x48FFAAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x48CCCC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 1024 0x48CCCC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 1024 0x48D7742: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 1024 0x49A3A3C: __printf_chk (printf_chk.c:33)
+          n1: 1024 0x1094FC: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+           n0: 1024 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n0: 16 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=60
+#-----------
+time=44288954
+mem_heap_B=86968
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=44748178
+mem_heap_B=87416
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=45209706
+mem_heap_B=87864
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=45665329
+mem_heap_B=88304
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=46123184
+mem_heap_B=88744
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=526658227
+mem_heap_B=89040
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=peak
+n3: 89040 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 88000 0x109B69: vector_insert (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+  n1: 88000 0x109548: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+   n0: 88000 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n1: 1024 0x48F11B4: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4901523: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x48FEF8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+    n1: 1024 0x48FFAAE: _IO_new_file_xsputn (fileops.c:1244)
+     n1: 1024 0x48FFAAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+      n1: 1024 0x48CCCC8: __printf_buffer_flush_to_file (printf_buffer_to_file.c:59)
+       n1: 1024 0x48CCCC8: __printf_buffer_to_file_done (printf_buffer_to_file.c:120)
+        n1: 1024 0x48D7742: __vfprintf_internal (vfprintf-internal.c:1545)
+         n1: 1024 0x49A3A3C: __printf_chk (printf_chk.c:33)
+          n1: 1024 0x1094FC: insert_erase_random (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+           n0: 1024 0x10935E: main (in /home/alex/Documents/ESIEE/E3/Algo/Algorithme-ProgrammationS3/TP3/utr_eapi_lib/bin/bench_vector)
+ n0: 16 in 2 places, all below massif's threshold (1.00%)
